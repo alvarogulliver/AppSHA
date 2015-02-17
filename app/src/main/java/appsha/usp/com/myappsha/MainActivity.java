@@ -17,13 +17,43 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button next = (Button) findViewById(R.id.button2);
-        next.setOnClickListener(new View.OnClickListener() {
+        Button btnCaptureData = (Button) findViewById(R.id.button);
+        Button btnCreatePerson = (Button) findViewById(R.id.button2);
+        Button btnSelectPerson = (Button) findViewById(R.id.button3);
+        Button btnGenerateDiagnostic = (Button) findViewById(R.id.button4);
+
+        // OnClick Event Capture Data
+        btnCaptureData.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent myIntent = new Intent( view.getContext(), CaptureData.class);
+                startActivityForResult(myIntent, 0);
+            }
+        });
+
+        // OnClick Event Create New Person
+        btnCreatePerson.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent( view.getContext(), CreateNewPerson.class);
                 startActivityForResult(myIntent, 0);
             }
         });
+
+        // OnClick Event Select Person
+        btnSelectPerson.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent myIntent = new Intent( view.getContext(), SelectPerson.class);
+                startActivityForResult(myIntent, 0);
+            }
+        });
+
+        // OnClick Event Generate Diagnostic Report
+        btnGenerateDiagnostic.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent myIntent = new Intent( view.getContext(), GenerateDiagnosticReport.class);
+                startActivityForResult(myIntent, 0);
+            }
+        });
+
 
     }
 
