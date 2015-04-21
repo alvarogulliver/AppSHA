@@ -32,6 +32,10 @@
             android:name=".CaptureData"
             android:label="@string/title_activity_capture_data" >
         </activity>
+        <activity
+            android:name=".MainSHA"
+            android:label="@string/title_activity_main_sh" >
+        </activity>
     </application>
 
 </manifest>
